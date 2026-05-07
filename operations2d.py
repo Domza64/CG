@@ -7,7 +7,7 @@ v1 = Vec2(3,2)
 m1 = Mat2([[2,0], [0,2]])
 
 def get_scale_matrix(scale_x, scale_y):
-    return Mat2([[scale_y, 0],[0, scale_x]])
+    return Mat2([[scale_y, 0], [0, scale_x]])
 
 def get_rotation_matrix(degrees):
     theta = math.radians(degrees)
