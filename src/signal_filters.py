@@ -74,3 +74,15 @@ def interpolate_missing_values(signal):
                 j += 1
 
     return signal
+
+def calculate_mse(original, filtered):
+    if len(original) != len(filtered):
+        raise ValueError("Not same length")
+    
+    errors = []
+    for i, orig in enumerate(original):
+        fil = filtered[i]
+        err = (orig - fil)**2
+        errors.append(err)
+
+    return sum(errors) / len(errors)
