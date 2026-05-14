@@ -1,1 +1,0 @@
-print("3D Cube")
